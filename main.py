@@ -1,6 +1,6 @@
 from flask import Flask,render_template, make_response
 from datetime import *
-# import serial
+import serial
 import json
 import random
 from time import *
@@ -28,7 +28,7 @@ def vibration_data():
 
     # vibration = int(getData)
 
-    vibration = 1
+    vibration = random.randint(100,300)
     time_var = time()*1000
     vibration_data = [time_var, vibration]
     return vibration_data
