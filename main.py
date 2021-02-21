@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'system.maintanance.info@gmail.com'
+app.config['MAIL_USERNAME'] = 'system.maintenance.info@gmail.com'
 app.config['MAIL_PASSWORD'] = 'DPR_1234'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
