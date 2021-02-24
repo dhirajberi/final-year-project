@@ -1,110 +1,139 @@
 <!DOCTYPE html>
-<html  lang="en" dir="ltr">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="utf-8">
-    <title>Final year Project</title>
-    <meta http-equiv="refresh" content="60" >
-    <!-- Bootstraps Java Scipts Links -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <title>Final year Project</title>
+  <meta http-equiv="refresh" content="60">
+  <!-- Bootstraps Java Scipts Links -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
 
-    <!-- JQuery links  -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- JQuery links  -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-    <!--High CHART LIVE  -->
-    <script src="http://code.highcharts.com/highcharts.js"></script>
-    <script src="http://code.highcharts.com/highcharts-more.js"></script>
-    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+  <!--High CHART LIVE  -->
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/highcharts-more.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
 
 
 </head>
 
 <body>
-    <div class="container my-4">
-        <center><h2>IT-05 FINAL YEAR PROJECT</h2></center>
-    </div>
 
-    <div class="container my-4">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <!-- Example row of columns -->
-        <div class="row">
-            <div class="container-fluid" id="data-container">
-            </div>
+      <a class="navbar-brand" href="#">IT-05</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://drive.google.com/file/d/1gCiuuUzkizr0sQJzfrdtYoc7IzZmdTmy/view">Report</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-4">
+    <center>
+      <h2>IT-05 FINAL YEAR PROJECT</h2>
+    </center>
+  </div>
+
+  <div class="container my-4">
+    <div class="container-fluid">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="container-fluid" id="data-container">
         </div>
+      </div>
     </div>
-    </div>
+  </div>
 
-    <div class='container my-4'>
-        <center>
-            <h3>Vibration: {{vibration}}, Reading Time: {{current_time}}</h3>
-            <h3>RUL: {{rul}}</h3>
-            <h3 style="color: {{color}};">{{risk}} | {{percentage}}%</h3>
-        </center>
-    </div>
+  <div class='container my-4'>
+    <center>
+      <h3>Vibration: {{vibration}}, Reading Time: {{current_time}}</h3>
+      <h3>RUL: {{rul}}</h3>
+      <h3 style="color: {{color}};">{{risk}} | {{percentage}}%</h3>
+    </center>
+  </div>
 
-    {% if risk == "Alert" %}
-    <audio autoplay loop>
-        <source src="{{ url_for('static', filename='alertsound.mp3') }}" type="audio/mp3">
-    </audio>
-    {% endif %}
+  {% if risk == "Alert" %}
+  <audio autoplay loop>
+    <source src="{{ url_for('static', filename='alertsound.mp3') }}" type="audio/mp3">
+  </audio>
+  {% endif %}
 
-    <script>
-        var chart;
-        function requestData()
-        {
-            // Ajax call to get the Data from Flask
-            var requests = $.get('/data');
-            
-            var tm = requests.done(function (result)
-            {
-                var series = chart.series[0],
-                    shift = series.data.length > 20;
+  <script>
+    var chart;
+    function requestData() {
+      // Ajax call to get the Data from Flask
+      var requests = $.get('/data');
 
-                // add the point
-                chart.series[0].addPoint(result, true, shift);
+      var tm = requests.done(function (result) {
+        var series = chart.series[0],
+          shift = series.data.length > 20;
 
-                // call it again after one second
-                setTimeout(requestData, 2000);
-            });
-        }
+        // add the point
+        chart.series[0].addPoint(result, true, shift);
 
-        $(document).ready(function() {
-            chart = new Highcharts.Chart({
-                chart: {
-                    renderTo: 'data-container',
-                    defaultSeriesType: 'spline',
-                    events: {
-                        load: requestData
-                    }
-                },
-                title: {
-                    text: 'Live Vibration Data'
-                },
-                xAxis: {
-                    type: 'datetime',
-                    tickPixelInterval: 150,
-                    maxZoom: 20 * 1000
-                },
-                yAxis: {
-                    minPadding: 0.2,
-                    maxPadding: 0.2,
-                    title: {
-                        text: 'Value',
-                        margin: 80
-                    }
-                },
-                series: [{
-                    name: 'Vibration data',
-                    data: []
-                }]
-            });
+        // call it again after one second
+        setTimeout(requestData, 2000);
+      });
+    }
 
-        });
-    </script>
+    $(document).ready(function () {
+      chart = new Highcharts.Chart({
+        chart: {
+          renderTo: 'data-container',
+          defaultSeriesType: 'spline',
+          events: {
+            load: requestData
+          }
+        },
+        title: {
+          text: 'Live Vibration Data'
+        },
+        xAxis: {
+          type: 'datetime',
+          tickPixelInterval: 150,
+          maxZoom: 20 * 1000
+        },
+        yAxis: {
+          minPadding: 0.2,
+          maxPadding: 0.2,
+          title: {
+            text: 'Value',
+            margin: 80
+          }
+        },
+        series: [{
+          name: 'Vibration data',
+          data: []
+        }]
+      });
+
+    });
+  </script>
 </body>
 
 </html>
