@@ -1,8 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
-url = "https://cc38a5c76891.ngrok.io/"
-
-r = requests.get(url)
-htmlContent = r.content
-soup = BeautifulSoup(htmlContent, 'html.parser')
-vibration = int(soup.get_text())
+import serial
+arduino_port = "COM3" 
+baud = 115200  
+ser = serial.Serial(arduino_port, baud)
+#display the data to the terminal
+removerChar="b\'\\rn"
+# def vibration_data():
+getData=str(ser.readline())
+for i in removerChar:
+    getData = getData.replace(i,"")
+vibration = int(getData)
