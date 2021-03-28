@@ -1,11 +1,11 @@
 from flask import Flask,render_template, make_response
 from datetime import *
-# import serial
 import json
 import random
 from time import *
 import pickle
 from flask_mail import Mail, Message
+from data import vibration
 
 app = Flask(__name__)
 
@@ -21,22 +21,6 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/vibration_data')
 def vibration_data():
-    # arduino_port = "COM3" 
-    # baud = 115200  
-
-    # ser = serial.Serial(arduino_port, baud)
-
-    # #display the data to the terminal
-    # removerChar="b\'\\rn"
-
-    # # def vibration_data():
-    # getData=str(ser.readline())
-    # for i in removerChar:
-    #     getData = getData.replace(i,"")
-
-    # vibration = int(getData)
-
-    vibration = random.randint(100,300)
     time_var = time()*1000
     vibration_data = [time_var, vibration]
     return vibration_data
