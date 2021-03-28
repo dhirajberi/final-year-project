@@ -5,7 +5,7 @@ import random
 from time import *
 import pickle
 from flask_mail import Mail, Message
-from data import vibration
+import requests
 
 app = Flask(__name__)
 
@@ -21,6 +21,9 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/vibration_data')
 def vibration_data():
+    url = "https://8b63b29227d9.ngrok.io/"
+    res = requests.get(url)
+    vibration = int(res.text)
     time_var = time()*1000
     vibration_data = [time_var, vibration]
     return vibration_data
